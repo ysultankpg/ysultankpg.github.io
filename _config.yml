@@ -1,0 +1,18 @@
+title: Yousuf Sultan — Datalume
+description: Lead Data Analyst & Analytics Automation — portfolio and blog
+baseurl: ""
+url: "https://ysultankpg.github.io"
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

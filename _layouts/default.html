@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} — {% endif %}Yousuf Sultan — Datalume</title>
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}Lead Data Analyst with 13+ years building enterprise analytics, BI, and automation platforms.{% endif %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="inner">
+    <div class="brand"><a href="{{ '/' | relative_url }}">Yousuf Sultan</a></div>
+    <ul>
+      <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+      <li><a href="{{ '/#experience' | relative_url }}">Experience</a></li>
+      <li><a href="{{ '/#projects' | relative_url }}">Automation</a></li>
+      <li><a href="{{ '/#skills' | relative_url }}">Skills</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section>
+  {{ content }}
+</section>
+
+<footer class="pagefoot">
+  © 2026 Yousuf Sultan · Built with care
+</footer>
+
+</body>
+</html>
