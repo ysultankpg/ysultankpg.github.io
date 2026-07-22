@@ -9,7 +9,14 @@ date: 2026-07-22
 
 <img src="/assets/images/blog/data-analyst-vs-bi-analyst-vs-data-engineer.png" alt="Comparison infographic: Data Analyst vs BI Analyst vs Data Engineer showing focus, responsibilities, tools, skills, deliverables, success metrics, and who each role is for.">
 
-<p>I've had a somewhat unusual vantage point on this, because over 13+ years I've genuinely moved across all three of these worlds at different points in my career — sometimes within the same role, sometimes within the same week. I've done the deep, one-off investigative work of a classic Data Analyst. I've architected and scaled the Snowflake pipelines and Tableau dashboards that a BI Analyst owns. And more recently, I've found myself doing work that's unmistakably Data Engineering — writing production Python that monitors pipeline health and automatically escalates failures before a human even notices something broke. So rather than relying on textbook definitions, here's how I actually think about the distinction, based on what the work has actually felt like from the inside — laid out side by side so it's easier to compare at a glance.</p>
+<p>I've had a somewhat unusual vantage point on this, because over 13+ years I've genuinely moved across all three of these worlds at different points in my career — sometimes within the same role, sometimes within the same week. I've done the deep, one-off investigative work of a classic Data Analyst. I've architected and scaled the Snowflake pipelines and Tableau dashboards that a BI Analyst owns. And more recently, I've found myself doing work that's unmistakably Data Engineering — writing production Python that monitors pipeline health and automatically escalates failures before a human even notices something broke. Here's the breakdown in full — one row for every angle that actually matters when you're trying to understand (or hire for) these roles.</p>
+
+<h2>The three roles, in one line each</h2>
+<ul>
+  <li><b>Data Analyst</b> — turns data into insights.</li>
+  <li><b>BI Analyst</b> — turns data into dashboards and decisions.</li>
+  <li><b>Data Engineer</b> — builds the systems that power the data.</li>
+</ul>
 
 <table>
   <thead>
@@ -22,70 +29,64 @@ date: 2026-07-22
   </thead>
   <tbody>
     <tr>
-      <td><b>Core role</b></td>
-      <td>The investigator — answers a specific question</td>
-      <td>The systems builder — builds infrastructure that answers questions continuously</td>
-      <td>The foundation layer — builds and maintains the pipes that move and store data reliably</td>
+      <td><b>Focus</b></td>
+      <td>Analyze historical data to find trends, patterns, and insights</td>
+      <td>Visualize data and build reports/dashboards for business decisions</td>
+      <td>Design, build, and maintain data pipelines and infrastructure</td>
     </tr>
     <tr>
-      <td><b>Typical trigger</b></td>
-      <td>"Why did signups drop last month?"</td>
-      <td>"The whole company needs to track this metric daily"</td>
-      <td>"We need clean, reliable data flowing from Source A into Snowflake every hour"</td>
+      <td><b>Key responsibilities</b></td>
+      <td>Clean and explore data; perform ad-hoc analysis; identify trends and patterns; answer business questions; create analysis reports</td>
+      <td>Understand business needs; design dashboards and reports; build KPIs and metrics; ensure data accuracy in reports; enable data-driven decisions</td>
+      <td>Design data architectures; build and maintain data pipelines; ingest, transform, and store data; ensure data quality and reliability; optimize performance and scalability</td>
     </tr>
     <tr>
-      <td><b>Primary output</b></td>
-      <td>One-time analysis, slide deck, recommendation</td>
-      <td>Dashboard, data model, or pipeline used for years</td>
-      <td>ETL/ELT pipelines, data warehouses, and the plumbing everything else depends on</td>
+      <td><b>Tools (examples)</b></td>
+      <td>Excel, SQL, Python</td>
+      <td>Tableau, Power BI, Looker</td>
+      <td>Snowflake, dbt, Airflow</td>
     </tr>
     <tr>
-      <td><b>Where you spend time</b></td>
-      <td>Notebooks, ad-hoc SQL, exploratory analysis</td>
-      <td>ETL pipelines, data warehousing, dashboard architecture</td>
-      <td>Orchestration tools, schema design, distributed systems, infrastructure-as-code</td>
+      <td><b>Skills</b></td>
+      <td>SQL, Excel, Python, statistics, data visualization, analytical thinking, problem solving, communication</td>
+      <td>SQL, data visualization, dashboard design, business acumen, stakeholder management</td>
+      <td>SQL, Python/Scala, ETL/ELT, data modeling, cloud platforms, databases, DevOps</td>
     </tr>
     <tr>
-      <td><b>Skillset leans toward</b></td>
-      <td>Statistics, hypothesis testing, storytelling with data</td>
-      <td>Data modeling, pipeline reliability, scalability</td>
-      <td>Software engineering, systems design, data architecture at scale</td>
+      <td><b>Deliverables</b></td>
+      <td>Reports, insights, analysis, ad-hoc queries</td>
+      <td>Dashboards, KPIs, reports, scorecards</td>
+      <td>Data pipelines, data models, data lakes/warehouses</td>
     </tr>
     <tr>
-      <td><b>Success looks like</b></td>
-      <td>A clear, convincing answer to a business question</td>
-      <td>A system that doesn't break when someone else touches it</td>
-      <td>Data that's always there, always fresh, and always trustworthy — invisible when it works</td>
+      <td><b>Success metrics</b></td>
+      <td>Accuracy of insights, impact on business questions, actionable recommendations</td>
+      <td>Dashboard adoption, report usage, decision impact, user satisfaction</td>
+      <td>Pipeline reliability, data quality, performance, scalability, uptime</td>
     </tr>
     <tr>
-      <td><b>Audience</b></td>
-      <td>Usually one stakeholder or team, once</td>
-      <td>Dozens to hundreds of users, every single day</td>
-      <td>Every downstream analyst, dashboard, and system — indirectly, at massive scale</td>
-    </tr>
-    <tr>
-      <td><b>Failure mode if done poorly</b></td>
-      <td>A wrong or misleading conclusion</td>
-      <td>A dashboard nobody trusts anymore</td>
-      <td>Data outages, silent corruption, or pipelines that quietly stop updating</td>
+      <td><b>Who it's for</b></td>
+      <td>People who love digging into data to find answers and tell the story behind the numbers</td>
+      <td>People who enjoy turning data into visuals and helping others make better decisions</td>
+      <td>People who enjoy building systems, automation, and working behind the scenes to power data</td>
     </tr>
   </tbody>
 </table>
 
+<h2>In short</h2>
+<p><b>Data Engineer builds the data → BI Analyst shapes the data → Data Analyst analyzes the data → together, they turn data into business value.</b> None of these roles works in isolation. A Data Analyst can't answer a business question with data that's late, broken, or untrustworthy — that's the Data Engineer's foundation. A BI Analyst can't build a dashboard people trust if the underlying pipeline is unreliable, or if nobody has actually analyzed what the numbers mean in context. And a Data Engineer's beautifully engineered pipeline is worthless if nobody ever turns that data into a decision. The three roles form a chain, not a hierarchy — each one depends on the other two doing their job well.</p>
+
 <h2>Where I've lived: somewhere in the overlap</h2>
 
-<p>Most of my career has actually blurred these lines rather than sitting neatly in one box. I've done the deep one-off investigations of a Data Analyst <i>and</i> built the Snowflake pipelines and Tableau dashboards that scale to 50+ stakeholders like a BI Analyst. And more recently, I've leaned into territory that's classically Data Engineering — writing Python automation that monitors pipeline health itself, auto-escalating failures to Slack and Radar before a human even notices something's wrong. The line between "analyst" and "engineer" gets blurrier every year, especially as more analysts are expected to write real code and think about reliability, not just insight.</p>
-
-<!-- IMAGE SLOT 2: consider a screenshot here, e.g. a dashboard or pipeline monitoring visual -->
-<!-- <img src="/assets/images/blog/your-image-2.jpg" alt="Description"> -->
+<p>Most of my career has actually blurred these lines rather than sitting neatly in one box. I've done the deep one-off investigations of a Data Analyst — the "clean and explore data, answer business questions" work — <i>and</i> built the Snowflake pipelines and Tableau dashboards that a BI Analyst owns, scaling them to 50+ stakeholders. And more recently, I've leaned into territory that's classically Data Engineering: designing data architecture, ensuring pipeline reliability, and writing Python automation that monitors pipeline health itself — auto-escalating failures to Slack and Radar before a human even notices something's wrong. The line between "analyst" and "engineer" gets blurrier every year, especially as more analysts are expected to write real code and think about reliability, not just insight.</p>
 
 <h2>Why the distinction still matters — even if the lines blur</h2>
 
-<p>If you're early in your career, it's worth asking which row of that table pulls you the most:</p>
+<p>If you're early in your career, it's worth asking which column of that table pulls you the most:</p>
 <ul>
-  <li>Do you love the hunt for an answer? → <b>Data Analyst</b></li>
-  <li>Do you love building something people rely on daily? → <b>BI Analyst</b></li>
-  <li>Do you love making sure the data itself never lets anyone down? → <b>Data Engineer</b></li>
+  <li>Do you love the hunt for an answer, and telling the story behind the numbers? → <b>Data Analyst</b></li>
+  <li>Do you love turning data into visuals and helping others make better decisions daily? → <b>BI Analyst</b></li>
+  <li>Do you love building systems and automation that work reliably behind the scenes? → <b>Data Engineer</b></li>
 </ul>
 
 <p>None of these is "better" than the others — they're different kinds of satisfaction, and honestly, different kinds of stress too. A Data Analyst's stress is intellectual: did I ask the right question, did I account for the right confounding variable, will this conclusion hold up under scrutiny in the room? A BI Analyst's stress is operational: will this dashboard still be accurate in six months when three new fields get added upstream, will the refresh finish before the 9 AM leadership meeting, will the numbers match what Finance is reporting in their own system? A Data Engineer's stress is structural: what happens at 2 AM when a source system changes its schema without warning, how do we make sure one bad upstream record doesn't quietly corrupt everything downstream, how do we scale this pipeline when data volume triples next year?</p>
