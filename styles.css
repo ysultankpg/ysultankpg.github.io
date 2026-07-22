@@ -488,6 +488,39 @@ footer.pagefoot {
   margin: 18px 0;
   font-style: italic;
 }
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14.5px;
+  overflow-x: auto;
+  display: block;
+}
+.post-content table thead,
+.post-content table tbody {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.post-content table th,
+.post-content table td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.post-content table th {
+  background: var(--dark);
+  color: white;
+  font-weight: 700;
+}
+.post-content table tbody tr:nth-child(even) {
+  background: var(--bg);
+}
+@media (max-width: 700px) {
+  .post-content table { font-size: 12.5px; }
+  .post-content table th, .post-content table td { padding: 8px 8px; }
+}
 .back-to-blog {
   display: inline-block;
   margin-top: 40px;
