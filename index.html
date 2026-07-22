@@ -48,7 +48,9 @@
     align-items: center;
     padding: 14px 24px;
   }
-  nav.topnav .brand { font-weight: 700; font-size: 15px; }
+  nav.topnav .brand { font-weight: 700; font-size: 20px; }
+  nav.topnav .brand a { color: var(--ink); text-decoration: none; }
+  nav.topnav .brand a:hover { color: var(--accent); }
   nav.topnav ul {
     list-style: none;
     display: flex;
@@ -307,11 +309,11 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
 <nav class="topnav">
   <div class="inner">
-    <div class="brand">Yousuf Sultan</div>
+    <div class="brand"><a href="#top">Yousuf Sultan</a></div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
