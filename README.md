@@ -168,20 +168,3 @@ Edit directly in GitHub's editor, same as everywhere else.
 2. Click the pencil icon → since it's a PDF (not text), GitHub will offer an **"Upload files"** option instead — use that to upload your new version
 3. **Keep the exact same filename** (`Yousuf_Sultan_Resume.pdf`, case-sensitive) — the "Download Resume" button on the site links to this exact name, so renaming it will break the link
 4. Commit
-
----
-
-## 🔒 A note on repo visibility (public vs. private)
-
-This repository is currently **public**, which is required for GitHub Pages to work on a free GitHub account. If you ever want the source code private while keeping the live site public, your options are:
-
-1. **Upgrade to GitHub Pro** (~$4/month) — lets GitHub Pages serve a private repo
-2. **Move hosting to Netlify, Vercel, or Cloudflare Pages** (all free) — these can deploy a public site from a private GitHub repo at no cost
-
-Nothing sensitive lives in this repo (no passwords, tokens, or private data) — just portfolio content that's already meant to be public, so public visibility is generally fine for a site like this.
-
----
-
-## 🌐 Local preview limitation (important)
-
-If you ever download this repo and open `index.html` directly on your computer (double-click, or drag into a browser), the **Blog** and **My Works** pages will show a "File not found" error. This is expected — those pages are built by Jekyll, which only runs automatically on GitHub's servers when you push changes, not when opening files locally. To see the real, working Blog/Works pages, always check the live site: **https://ysultankpg.github.io**
