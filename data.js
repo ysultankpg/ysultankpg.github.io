@@ -194,7 +194,7 @@ const AUTOMATION_PROJECTS = [
 // ---------------------------------------------------------------------------
 const IMPACT_NUMBERS = [
   { num: "13+", label: "Years Experience" },
-  { num: "13", label: "Analysts Managed & Mentored" },
+  { num: "8", label: "Analysts Managed & Mentored" },
   { num: "10M+", label: "Records Processed" },
   { num: "20+", label: "Dashboards Owned" },
   { num: "29", label: "Pipelines Auto-Monitored" },
