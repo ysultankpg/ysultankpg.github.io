@@ -373,6 +373,80 @@ footer.pagefoot {
   text-align: center;
   margin-bottom: 40px;
 }
+
+/* SUBSCRIBE FORM (Buttondown) */
+.subscribe-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.subscribe-box h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.subscribe-box p.subscribe-sub {
+  font-size: 13.5px;
+  color: var(--sub);
+  margin-bottom: 18px;
+}
+.embeddable-buttondown-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.embeddable-buttondown-form label {
+  display: none;
+}
+.embeddable-buttondown-form input[type="email"] {
+  padding: 11px 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--bg);
+  min-width: 260px;
+}
+.embeddable-buttondown-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: white;
+}
+.embeddable-buttondown-form input[type="submit"] {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.embeddable-buttondown-form input[type="submit"]:hover {
+  background: #0060c0;
+}
+.embeddable-buttondown-form p {
+  width: 100%;
+  margin: 10px 0 0;
+  font-size: 11.5px;
+  color: var(--sub);
+}
+.embeddable-buttondown-form p a {
+  color: var(--sub);
+  text-decoration: underline;
+}
+@media (max-width: 500px) {
+  .embeddable-buttondown-form input[type="email"] { min-width: 0; width: 100%; }
+  .embeddable-buttondown-form input[type="submit"] { width: 100%; }
+}
 .post-list {
   display: flex;
   flex-direction: column;
