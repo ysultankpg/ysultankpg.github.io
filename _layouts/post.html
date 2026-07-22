@@ -12,17 +12,15 @@ layout: default
     <h4>Enjoyed this post?</h4>
     <p class="subscribe-sub">Subscribe to get notified whenever I publish something new.</p>
     <form
-      action="https://buttondown.com/api/emails/embed-subscribe/ysultankpg"
-      method="post"
       class="embeddable-buttondown-form"
+      action="https://assets.mailerlite.com/jsonp/2526987/forms/193725613846038099/subscribe"
+      method="post"
+      target="_blank"
     >
-      <label for="bd-email-post">Enter your email</label>
-      <input type="email" name="email" id="bd-email-post" />
+      <label for="ml-email-post">Enter your email</label>
+      <input aria-label="email" type="email" id="ml-email-post" name="fields[email]" placeholder="Email" autocomplete="email" required />
+      <input type="hidden" name="ml-submit" value="1">
       <input type="submit" value="Subscribe" />
-      <p>
-        <a href="https://buttondown.com/refer/ysultankpg" target="_blank">
-        </a>
-      </p>
     </form>
   </div>
 
