@@ -13,7 +13,7 @@
 
 - title: "HR Analysis Dashboard"
   description: "An interactive HR analytics dashboard tracking employee attrition, department-wise breakdowns, job satisfaction ratings, and age-group attrition trends — built to help HR teams spot retention risks at a glance."
-  url: "https://public.tableau.com/app/profile/yourprofile/viz/YourVizName"
+  url: "https://public.tableau.com/app/profile/yousuf.sultan7836/viz/HRAnalysis_17515413939270/HRAnalysis"
   type: "Tableau Public"
   image: "/assets/images/works/hr-analysis-dashboard.png"
   icon: "📊"
