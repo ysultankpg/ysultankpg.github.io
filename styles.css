@@ -17,7 +17,25 @@
   --card: #ffffff;
   --border: #d3e3f2;
   --dark: #08203f;
+  --muted-text: #444444;
+  --code-block-bg: #08203f;
 }
+
+[data-theme="dark"] {
+  --ink: #e8eef7;
+  --sub: #92aac6;
+  --accent: #3b9eff;
+  --accent2: #4db8ff;
+  --accent3: #5fb0ff;
+  --accent4: #8fc7ff;
+  --bg: #0a1420;
+  --card: #121f30;
+  --border: #24374d;
+  --dark: #060d16;
+  --muted-text: #c3cfe0;
+  --code-block-bg: #060d16;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -25,6 +43,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 a { color: var(--accent); text-decoration: none; }
 
@@ -33,11 +52,12 @@ nav.topnav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255,255,255,0.85);
+  background: var(--card);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 nav.topnav .inner {
   max-width: 960px;
@@ -51,6 +71,11 @@ nav.topnav .inner {
 nav.topnav .brand { font-weight: 700; font-size: 20px; white-space: nowrap; flex-shrink: 0; }
 nav.topnav .brand a { color: var(--ink); text-decoration: none; }
 nav.topnav .brand a:hover { color: var(--accent); }
+nav.topnav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 nav.topnav ul {
   list-style: none;
   display: flex;
@@ -80,6 +105,38 @@ nav.topnav ul li a.active {
 }
 nav.topnav ul li a.active:hover { background: var(--accent); color: white; }
 
+/* THEME TOGGLE */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.theme-toggle button {
+  border: none;
+  background: transparent;
+  color: var(--sub);
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.theme-toggle button:hover { color: var(--accent); }
+.theme-toggle button.active {
+  background: var(--accent);
+  color: white;
+}
+.theme-toggle button.active:hover { color: white; }
+
 @media (max-width: 780px) {
   nav.topnav .inner {
     flex-direction: column;
@@ -88,6 +145,9 @@ nav.topnav ul li a.active:hover { background: var(--accent); color: white; }
     gap: 8px;
   }
   nav.topnav .brand { text-align: center; font-size: 17px; }
+  nav.topnav .nav-right {
+    justify-content: center;
+  }
   nav.topnav ul {
     justify-content: flex-start;
     padding-bottom: 2px;
@@ -101,7 +161,7 @@ nav.topnav ul li a.active:hover { background: var(--accent); color: white; }
 header.hero {
   text-align: center;
   padding: 0;
-  background: white;
+  background: var(--card);
 }
 header.hero .banner-img {
   width: 100%;
@@ -128,7 +188,7 @@ header.hero .avatar {
   margin: 0 auto 22px;
   display: block;
   object-fit: cover;
-  border: 4px solid white;
+  border: 4px solid var(--card);
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 header.hero h1 {
@@ -165,7 +225,7 @@ header.hero .tagline {
 }
 .btn-primary { background: #E67E22; color: white; }
 .btn-primary:hover { background: #ca6c1a; }
-.btn-secondary { background: white; color: var(--ink); border: 1px solid var(--border); }
+.btn-secondary { background: var(--card); color: var(--ink); border: 1px solid var(--border); }
 .btn-secondary:hover { background: var(--bg); }
 .btn-resume { background: #16A085; color: white; border: 1px solid #16A085; }
 .btn-resume:hover { background: #128c74; }
@@ -178,7 +238,7 @@ section {
   margin: 0 auto;
   padding: 64px 24px;
 }
-section.alt { background: white; max-width: 100%; padding: 64px 0; }
+section.alt { background: var(--card); max-width: 100%; padding: 64px 0; }
 section.alt .inner { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 h2.section-title {
   font-size: 13px;
@@ -305,7 +365,7 @@ h3.section-heading {
   font-size: 20px; color: white; margin-bottom: 14px;
 }
 .project-card h4 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
-.project-card p.desc { font-size: 14px; color: #444; margin-bottom: 14px; flex-grow: 1; }
+.project-card p.desc { font-size: 14px; color: var(--muted-text); margin-bottom: 14px; flex-grow: 1; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .tag { background: var(--bg); font-size: 11.5px; padding: 4px 10px; border-radius: 999px; color: var(--sub); font-weight: 500; }
 .project-stats { display: flex; gap: 16px; font-size: 12.5px; color: var(--sub); border-top: 1px solid var(--border); padding-top: 12px; }
@@ -343,7 +403,7 @@ h3.section-heading {
   .contact-card h3 { font-size: 21px; }
 }
 .contact-card h3 { font-size: 26px; font-weight: 700; margin-bottom: 10px; color: white; }
-.contact-card p { color: #a1a1a6; margin-bottom: 26px; font-size: 15px; }
+.contact-card p { color: #a8bdd6; margin-bottom: 26px; font-size: 15px; }
 .contact-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .contact-links a {
   background: white; color: var(--dark);
@@ -417,7 +477,7 @@ footer.pagefoot {
 .embeddable-buttondown-form input[type="email"]:focus {
   outline: none;
   border-color: var(--accent);
-  background: white;
+  background: var(--card);
 }
 .embeddable-buttondown-form input[type="submit"] {
   background: var(--accent);
@@ -476,7 +536,7 @@ footer.pagefoot {
 }
 .post-card p.excerpt {
   font-size: 14.5px;
-  color: #444;
+  color: var(--muted-text);
   margin-bottom: 0;
 }
 .post-card .read-more {
@@ -515,7 +575,7 @@ footer.pagefoot {
 .post-content {
   font-size: 16px;
   line-height: 1.75;
-  color: #1c1c1e;
+  color: var(--ink);
 }
 .post-content p { margin-bottom: 18px; }
 .post-content h2 {
@@ -634,7 +694,7 @@ footer.pagefoot {
 }
 .work-card:hover { border-color: var(--accent); }
 .work-card h4 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
-.work-card p.desc { font-size: 14px; color: #444; margin-bottom: 14px; flex-grow: 1; }
+.work-card p.desc { font-size: 14px; color: var(--muted-text); margin-bottom: 14px; flex-grow: 1; }
 .work-card .read-more {
   display: inline-block;
   margin-top: 10px;
