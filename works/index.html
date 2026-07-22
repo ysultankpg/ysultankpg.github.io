@@ -1,0 +1,29 @@
+---
+layout: default
+title: My Works
+permalink: /works/
+---
+<div class="blog-header">
+  <h2 class="section-title">My Works</h2>
+  <h3 class="section-heading">Dashboards, apps, and public projects I've built</h3>
+</div>
+
+<div class="works-grid">
+  {% for item in site.data.works %}
+  <a class="work-card" href="{{ item.url }}" target="_blank" rel="noopener">
+    <div class="project-icon">{{ item.icon }}</div>
+    <h4>{{ item.title }}</h4>
+    <p class="desc">{{ item.description }}</p>
+    <div class="project-tags">
+      <span class="tag">{{ item.type }}</span>
+    </div>
+    <span class="read-more">View →</span>
+  </a>
+  {% endfor %}
+</div>
+
+{% if site.data.works.size == 0 %}
+<div class="empty-blog-note">
+  No works added yet — check back soon.
+</div>
+{% endif %}

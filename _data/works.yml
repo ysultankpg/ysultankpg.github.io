@@ -1,0 +1,17 @@
+# ============================================================================
+# WORKS — external showcase links (Tableau Public dashboards, apps, etc.)
+# ----------------------------------------------------------------------------
+# To add a new work: copy one block below and fill in your own details.
+# Fields:
+#   title       - name of the dashboard/app
+#   description - 1-2 sentence summary of what it does / why it matters
+#   url         - link to the live Tableau Public viz, app store page, site, etc.
+#   type        - short label shown as a tag, e.g. "Tableau Public", "Web App", "iOS App"
+#   icon        - a single emoji used as the card icon
+# ============================================================================
+
+- title: "Example Dashboard — replace me"
+  description: "Replace this with a real Tableau Public dashboard or app you've built. Delete this placeholder once you add your first real entry."
+  url: "https://public.tableau.com/"
+  type: "Tableau Public"
+  icon: "📊"
