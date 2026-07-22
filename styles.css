@@ -62,9 +62,10 @@ nav.topnav ul li a {
   font-weight: 500;
   padding: 7px 14px;
   border-radius: 999px;
+  background: var(--bg);
   transition: background 0.15s ease, color 0.15s ease;
 }
-nav.topnav ul li a:hover { background: var(--bg); color: var(--accent); }
+nav.topnav ul li a:hover { background: var(--border); color: var(--accent); }
 nav.topnav ul li a.active {
   background: var(--accent);
   color: white;
