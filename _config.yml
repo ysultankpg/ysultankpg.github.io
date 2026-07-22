@@ -1,7 +1,7 @@
-title: Yousuf Sultan — Datalume
+title: Yousuf Sultan
 description: Lead Data Analyst & Analytics Automation — portfolio and blog
 baseurl: ""
-url: "https://ysultankpg.github.io"
+url: "https://yousufsultan.netlify.app"
 
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/

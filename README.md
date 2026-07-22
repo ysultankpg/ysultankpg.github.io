@@ -1,4 +1,4 @@
-# Datalume — Yousuf Sultan's Portfolio & Blog
+# Yousuf Sultan's Portfolio & Blog
 
 This repository powers [https://yousufsultan.netlify.app](https://yousufsultan.netlify.app) — a personal portfolio site (About, Experience, Skills, Automation Projects) with a built-in blog and a "My Works" showcase page, both powered by **Jekyll**, built and deployed automatically by **Netlify**.
 
