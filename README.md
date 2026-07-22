@@ -170,3 +170,42 @@ Edit directly in GitHub's editor, same as everywhere else.
 2. Click the pencil icon → since it's a PDF (not text), GitHub will offer an **"Upload files"** option instead — use that to upload your new version
 3. **Keep the exact same filename** (`Yousuf_Sultan_Resume.pdf`, case-sensitive) — the "Download Resume" button on the site links to this exact name, so renaming it will break the link
 4. Commit
+
+---
+
+## 📱 Posting from your phone (GitHub Mobile App)
+
+You don't need a laptop to add a blog post or a new "Works" entry — the **GitHub mobile app** handles almost everything.
+
+### What works well in the app
+- ✅ Creating new blog posts (`_posts/` folder → "Create file")
+- ✅ Editing existing text files (posts, `_data/works.yml`, `data.js`, etc.)
+- ✅ Committing changes
+
+### Adding a blog post from your phone
+1. Open the GitHub app → your repo → **`_posts/`** folder
+2. Tap **"+"** or the **"..." menu → "Create file"**
+3. Name it `YYYY-MM-DD-your-title.md`
+4. Type your content (same front matter format as on desktop):
+   ```markdown
+   ---
+   title: "Your Post Title"
+   date: 2026-08-01
+   ---
+
+   Your content here.
+   ```
+5. Tap **Commit**
+
+### Adding a "My Works" entry from your phone
+Same idea — open `_data/works.yml`, tap the pencil icon, add your new block, commit.
+
+### ⚠️ One gap: uploading images from the app
+The GitHub mobile app's built-in text editor doesn't have an image upload button the way the desktop browser version does. Two workarounds:
+1. **Best option**: open **github.com in your phone's mobile browser** (Safari/Chrome) instead of the app when you need to upload an image — the browser version has a proper upload/drag-and-drop button and works fine on a phone screen.
+2. Alternatively, some versions of the GitHub app support sharing a photo directly from your Photos app into a specific repo folder via the iOS share sheet — availability depends on your app version.
+
+Once the image is uploaded to `assets/images/`, reference it in your post exactly like on desktop:
+```markdown
+![Description of the image](/assets/images/your-image-name.jpg)
+```
