@@ -1,6 +1,8 @@
 # Datalume — Yousuf Sultan's Portfolio & Blog
 
-This repository powers [https://ysultankpg.github.io](https://ysultankpg.github.io) — a personal portfolio site (About, Experience, Skills, Automation Projects) with a built-in blog and a "My Works" showcase page, both powered by **Jekyll** (built into GitHub Pages, free, no extra tools required).
+This repository powers [https://yousufsultan.netlify.app](https://yousufsultan.netlify.app) — a personal portfolio site (About, Experience, Skills, Automation Projects) with a built-in blog and a "My Works" showcase page, both powered by **Jekyll**, built and deployed automatically by **Netlify**.
+
+> 🔒 This repository is **private**. Only you (and anyone you explicitly invite as a collaborator) can view or edit these files on GitHub. The live site itself remains fully public at the Netlify URL above.
 
 Everything below can be done **directly on GitHub.com in your browser** — no local setup, no terminal, no software installation needed.
 
@@ -28,12 +30,12 @@ Everything below can be done **directly on GitHub.com in your browser** — no l
 
 Every instruction below follows the same basic pattern:
 
-1. Go to **https://github.com/ysultankpg/ysultankpg.github.io**
+1. Go to **https://github.com/ysultankpg/ysultankpg.github.io** (sign in — this repo is private)
 2. Navigate to the file you want to change
 3. Click the **pencil (✏️) icon** in the top-right of the file view
 4. Make your edit directly in GitHub's browser-based editor
 5. Scroll down, write a short commit message (e.g. "Update About text"), click **"Commit changes"**
-6. Wait ~30–60 seconds — GitHub Pages rebuilds and redeploys automatically
+6. Wait ~1-3 minutes — Netlify automatically detects the push, rebuilds the Jekyll site, and redeploys to https://yousufsultan.netlify.app
 
 No local files, no terminal, no git commands required for any of this.
 
