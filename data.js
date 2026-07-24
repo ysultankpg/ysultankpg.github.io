@@ -116,6 +116,8 @@ const CORE_STRENGTHS = [
   { name: "Python", bg: "#3776AB", color: "#ffffff" },
   { name: "Tableau", bg: "#E97627", color: "#ffffff" },
   { name: "Power BI", bg: "#F2C811", color: "#1d1d1f" },
+  { name: "Claude Code", bg: "#D97757", color: "#ffffff" },
+  { name: "AI-Assisted Analytics", bg: "#6366F1", color: "#ffffff" },
   { name: "Team Leadership", bg: "#8E44AD", color: "#ffffff" },
   { name: "Process Automation", bg: "#E74C3C", color: "#ffffff" },
   { name: "Stakeholder Management", bg: "#16A085", color: "#ffffff" },
@@ -143,7 +145,7 @@ const SKILL_CATEGORIES = [
   },
   {
     title: "Automation & Integration",
-    items: ["Python scripting", "Slack/Email APIs", "Kerberos/SPNego", "Radar API", "Harbor/launchd scheduling", "Claude Code"],
+    items: ["Python scripting", "Slack/Email APIs", "Kerberos/SPNego", "Radar API", "Harbor/launchd scheduling", "Claude Code", "MCP (Model Context Protocol)", "Snowflake MCP", "Tableau MCP", "AI-Assisted Analytics", "Prompt Engineering"],
   },
   {
     title: "Tools",
@@ -171,8 +173,10 @@ const AUTOMATION_PROJECTS = [
       "automatically detecting failures and escalating them — creating and prioritizing " +
       "P1 Radar tickets, emailing stakeholders, and posting Slack alerts with the " +
       "correct owner auto-@mentioned. Built with GenAI-assisted engineering (Claude Code) " +
-      "to accelerate development while retaining full design ownership and code review.",
-    tags: ["Python", "Slack API", "Radar API", "Kerberos Auth", "Harbor Scheduling", "Claude Code"],
+      "using the Model Context Protocol (MCP) — including Snowflake MCP and Tableau MCP servers " +
+      "to query pipeline/dashboard state directly — and deliberate prompt engineering to accelerate " +
+      "development while retaining full design ownership and code review.",
+    tags: ["Python", "Slack API", "Radar API", "Kerberos Auth", "Harbor Scheduling", "Claude Code", "MCP", "Snowflake MCP", "Tableau MCP", "Prompt Engineering"],
     stats: ["<b>29</b> pipelines monitored", "<b>5x</b>/day automated runs"],
   },
   {
@@ -183,8 +187,8 @@ const AUTOMATION_PROJECTS = [
       "(Category, Tentpole, Needed Date, Efforts) and auto-routes targeted email and " +
       "Slack notifications to the correct owner — removing a manual audit step entirely " +
       "from the team's workflow. Also built with GenAI-assisted engineering (Claude Code) " +
-      "to speed up iteration on the Python codebase.",
-    tags: ["Python", "Radar API", "SMTP Email", "Slack Webhooks", "Claude Code"],
+      "and AI-assisted analytics via MCP-connected tooling to speed up iteration on the Python codebase.",
+    tags: ["Python", "Radar API", "SMTP Email", "Slack Webhooks", "Claude Code", "MCP", "AI-Assisted Analytics"],
     stats: ["Auto field-validation", "Zero manual triage"],
   },
 ];
