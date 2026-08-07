@@ -191,6 +191,36 @@ const AUTOMATION_PROJECTS = [
     tags: ["Python", "Radar API", "SMTP Email", "Slack Webhooks", "Claude Code", "MCP", "AI-Assisted Analytics"],
     stats: ["Auto field-validation", "Zero manual triage"],
   },
+  {
+    icon: "🌳",
+    title: "SQL Table Lineage Explorer",
+    description:
+      "A tool that traces full upstream and downstream table lineage directly from SQL source " +
+      "code — solving a gap where scheduled SQL scripts (as opposed to views) don't show up in " +
+      "a warehouse's built-in dependency metadata. Parses every SQL file in a repository into a " +
+      "single dependency graph, then runs a breadth-first search in both directions to show exactly " +
+      "what feeds a table and everything that gets built from it, rendered as a searchable, " +
+      "collapsible tree. Includes a live, role-free Snowflake lookup layer — built with Claude Code " +
+      "via MCP — to resolve the real schema a table lives in, catching cases where a script's own " +
+      "comments or configuration disagree with where the table actually landed.",
+    tags: ["Python", "SQL Parsing", "Snowflake", "Claude Code", "MCP", "Snowflake MCP", "Dependency Graphs"],
+    stats: ["Full-depth lineage", "Repo-wide graph traversal"],
+  },
+  {
+    icon: "📖",
+    title: "Self-Updating Data Dictionary Generator",
+    description:
+      "A fully browser-based tool that turns any SQL folder in a source repository into a " +
+      "browsable, self-updating data dictionary — no installation required for the core flow. " +
+      "Parses table/view definitions to extract columns, source tables, and clustering keys, " +
+      "then optionally enriches every column with its live Snowflake data type via a small, " +
+      "secured backend service, so the dictionary never goes stale even as the underlying " +
+      "pipeline evolves. Falls back gracefully to SQL-based type inference when the live lookup " +
+      "isn't configured, and was designed with a security-first model — credentials never touch " +
+      "the browser, and every query is strictly read-only.",
+    tags: ["JavaScript", "SQL Parsing", "Snowflake", "FastAPI", "Claude Code", "MCP", "Security-First Design"],
+    stats: ["Zero-install core flow", "Live schema enrichment"],
+  },
 ];
 
 // ---------------------------------------------------------------------------
