@@ -269,4 +269,14 @@ const AI_AGENTS = [
     tags: ["Enterprise Assistant", "Radar API", "Personal Workflow", "Daily Briefing"],
     status: "Live - daily runs",
   },
+  {
+    icon: "📊",
+    title: "Stakeholder Weekly Recap",
+    description:
+      "A weekly agent that compiles key updates, metrics movements, and action items across " +
+      "all active workstreams into a single digest — then delivers a formatted recap to " +
+      "stakeholders via Slack and email, keeping 50+ partners aligned without manual status meetings.",
+    tags: ["Enterprise Assistant", "Slack API", "Email Automation", "Weekly Digest", "Stakeholder Comms"],
+    status: "Live - weekly runs",
+  },
 ];
