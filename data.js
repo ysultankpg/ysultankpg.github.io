@@ -233,3 +233,40 @@ const IMPACT_NUMBERS = [
   { num: "20+", label: "Dashboards Owned" },
   { num: "29", label: "Pipelines Auto-Monitored" },
 ];
+
+// ---------------------------------------------------------------------------
+// AI AGENTS — autonomous assistants designed and deployed via GenAI tooling.
+// ---------------------------------------------------------------------------
+const AI_AGENTS = [
+  {
+    icon: "🤖",
+    title: "Radar Daily Triage",
+    description:
+      "An autonomous daily agent that scans all open Radar tickets across my assigned components, " +
+      "categorizes them by urgency (Overdue, Due Soon, P1/P2 fires, Stale 60+ days), and emails " +
+      "a clean HTML summary with 3-6 prioritized action items every weekday morning at 9 AM.",
+    tags: ["Enterprise Assistant", "Radar API", "Email Automation", "Scheduled Agent"],
+    status: "Live - runs daily on weekdays",
+  },
+  {
+    icon: "👥",
+    title: "Team Radar Triage",
+    description:
+      "A team-wide triage agent that pulls all open tickets from multiple bug-tracking components, " +
+      "groups them by assignee, and delivers a structured prioritized report via email — " +
+      "giving the entire team visibility into the backlog without manual audit.",
+    tags: ["Enterprise Assistant", "Bug Tracking API", "Multi-Component", "Team Visibility", "Email"],
+    status: "Live - scheduled runs",
+  },
+  {
+    icon: "📋",
+    title: "My Day - Radar Triage",
+    description:
+      "A personal daily assistant that reviews both assigned and originated Radars, " +
+      "synthesizes them into a single prioritized action list, and emails a formatted " +
+      "summary on every run — designed as a personal 'start-of-day' briefing to eliminate " +
+      "manual ticket scanning.",
+    tags: ["Enterprise Assistant", "Radar API", "Personal Workflow", "Daily Briefing"],
+    status: "Live - daily runs",
+  },
+];

@@ -7,17 +7,24 @@
 <meta name="description" content="Lead Data Analyst with 13+ years building enterprise analytics, BI, and automation platforms. Currently leading Apple Maps analytics via Cognizant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="animations.css">
 <script src="theme-toggle.js"></script>
 </head>
-<body id="top">
+<body id="top" class="page-loading">
 
-<nav class="topnav">
+<div class="progress-bar" id="progress-bar"></div>
+
+<nav class="topnav" id="topnav">
   <div class="inner">
     <div class="brand"><a href="#top">Yousuf Sultan</a></div>
-    <div class="nav-right">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right" id="nav-menu">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#agents">AI Agents</a></li>
         <li><a href="#projects">Automation</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="/blog/">Blog</a></li>
@@ -41,19 +48,25 @@
 </header>
 
 <section id="impact">
-  <h2 class="section-title">Impact</h2>
-  <h3 class="section-heading">Numbers that tell the story</h3>
-  <div class="impact-strip" id="impact-strip">
-    <!-- Rendered dynamically from data.js (IMPACT_NUMBERS) -->
+  <h2 class="section-title reveal">Impact</h2>
+  <h3 class="section-heading reveal">Numbers that tell the story</h3>
+  <div class="impact-strip" id="impact-strip"></div>
+</section>
+
+<section id="agents" class="alt">
+  <div class="inner">
+    <h2 class="section-title reveal">AI Agents</h2>
+    <h3 class="section-heading reveal">Autonomous assistants I've designed and deployed</h3>
+    <div class="agents-grid" id="agents-grid"></div>
   </div>
 </section>
 
 <section class="alt" id="about">
   <div class="inner">
-    <h2 class="section-title">About</h2>
-    <h3 class="section-heading">Who I am</h3>
+    <h2 class="section-title reveal">About</h2>
+    <h3 class="section-heading reveal">Who I am</h3>
     <div class="about-grid">
-      <div>
+      <div class="reveal">
         <p>
           I'm a Lead Data Analyst with over 13 years of experience turning raw data into
           decisions — across technology, geospatial, and healthcare organizations. I currently
@@ -69,11 +82,9 @@
           self-healing, and trusted by the people who depend on it.
         </p>
       </div>
-      <div>
+      <div class="reveal">
         <h4 style="font-size:13px;font-weight:700;margin-bottom:6px;">Core Strengths</h4>
-        <div class="pills" id="core-strengths-pills">
-          <!-- Rendered dynamically from data.js (CORE_STRENGTHS) -->
-        </div>
+        <div class="pills" id="core-strengths-pills"></div>
       </div>
     </div>
   </div>
@@ -81,59 +92,55 @@
 
 <section id="experience">
   <div class="section-head-row">
-    <h2 class="section-title">Experience</h2>
-    <h3 class="section-heading">Where I've worked</h3>
+    <h2 class="section-title reveal">Experience</h2>
+    <h3 class="section-heading reveal">Where I've worked</h3>
   </div>
-
-  <div id="experience-list">
-    <!-- Rendered dynamically from data.js (EXPERIENCE), sorted reverse-chronologically -->
-  </div>
+  <div class="timeline" id="experience-list"></div>
 </section>
 
 <section class="alt" id="projects">
   <div class="inner">
-    <h2 class="section-title">Automation Projects</h2>
-    <h3 class="section-heading">Systems I've built to eliminate manual work</h3>
-    <div class="projects-grid" id="projects-grid">
-      <!-- Rendered dynamically from data.js (AUTOMATION_PROJECTS) -->
-    </div>
+    <h2 class="section-title reveal">Automation Projects</h2>
+    <h3 class="section-heading reveal">Systems I've built to eliminate manual work</h3>
+    <div class="projects-grid" id="projects-grid"></div>
   </div>
 </section>
 
 <section id="skills">
   <div class="section-head-row">
-    <h2 class="section-title">Skills</h2>
-    <h3 class="section-heading">Technical toolkit</h3>
+    <h2 class="section-title reveal">Skills</h2>
+    <h3 class="section-heading reveal">Technical toolkit</h3>
   </div>
-  <div class="skills-grid" id="skills-grid">
-    <!-- Rendered dynamically from data.js (SKILL_CATEGORIES) -->
-  </div>
+  <div class="skills-grid" id="skills-grid"></div>
 </section>
 
 <section id="contact">
-  <div class="contact-card">
+  <div class="contact-card reveal">
     <h3>Let's talk</h3>
     <p>Open to Lead Data Analyst, Analytics Lead, and Analytics Manager roles — remote or Hyderabad hybrid.</p>
     <div class="contact-links">
-      <a href="mailto:ysultankpg@gmail.com">✉️ ysultankpg@gmail.com</a>
+      <a href="mailto:ysultankpg@gmail.com">ysultankpg@gmail.com</a>
       <a href="https://www.linkedin.com/in/yousufkpg/" target="_blank" class="linkedin-link">LinkedIn</a>
-      <a href="tel:+919739001239">📞 +91 9739001239</a>
+      <a href="tel:+919739001239">+91 9739001239</a>
     </div>
   </div>
 </section>
 
 <footer class="pagefoot">
-  © 2026 Yousuf Sultan · Built with care
+  2026 Yousuf Sultan - Built with care
   <div style="margin-top:6px;">
-    Unique Visitors: <span id="visitor-count">…</span>
+    Unique Visitors: <span id="visitor-count">...</span>
   </div>
 </footer>
 
-<script src="visitor-counter.js"></script>
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
 
+<script src="visitor-counter.js"></script>
 <script src="data.js"></script>
 <script src="render.js"></script>
+<script src="animations.js"></script>
 <script src="nav-active.js"></script>
-
 </body>
 </html>

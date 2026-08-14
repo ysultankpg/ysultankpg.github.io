@@ -139,17 +139,17 @@ nav.topnav ul li a.active:hover { background: var(--accent); color: white; }
 
 @media (max-width: 780px) {
   nav.topnav .inner {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: wrap;
     padding: 12px 16px;
     gap: 8px;
   }
-  nav.topnav .brand { text-align: center; font-size: 17px; }
+  nav.topnav .brand { font-size: 17px; }
   nav.topnav .nav-right {
     justify-content: center;
   }
   nav.topnav ul {
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
     padding-bottom: 2px;
   }
 }
