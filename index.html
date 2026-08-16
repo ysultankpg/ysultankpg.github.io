@@ -144,9 +144,22 @@
 
 <footer><p>2026 Yousuf Sultan &middot; Visitors: <span id="visitor-count">...</span></p></footer>
 
+<button class="go-top" id="go-top" aria-label="Go to top">↑</button>
+
 <script src="./data.js"></script>
 <script src="./render.js"></script>
 <script src="./theme.js"></script>
 <script src="./visitor-counter.js"></script>
+<script>
+(function(){
+  var btn = document.getElementById("go-top");
+  window.addEventListener("scroll", function() {
+    btn.classList.toggle("visible", window.scrollY > 400);
+  });
+  btn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+</script>
 </body>
 </html>

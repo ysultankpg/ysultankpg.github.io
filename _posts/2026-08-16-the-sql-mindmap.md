@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The SQL Mindmap — Everything You Need in One View"
-date: 2026-08-17
+date: 2026-08-16
 excerpt: "A visual mindmap covering every major SQL concept — from DDL and DML to Window Functions and Joins. Here's how I use it as a quick-reference mental model."
 ---
 
