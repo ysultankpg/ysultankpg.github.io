@@ -103,6 +103,21 @@ function renderAgents() {
   ).join("");
 }
 
+function renderCerts() {
+  const el = document.getElementById("certs-grid");
+  if (!el || typeof CERTIFICATIONS === "undefined") return;
+  el.innerHTML = CERTIFICATIONS.map(
+    (c) => `
+    <div class="cert-card reveal">
+      <span class="cert-icon">${c.icon}</span>
+      <div>
+        <h4>${c.name}</h4>
+        <p>${c.issuer}</p>
+      </div>
+    </div>`
+  ).join("");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderImpact();
   renderCoreStrengths();
@@ -110,4 +125,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAgents();
   renderProjects();
   renderSkills();
+  renderCerts();
 });

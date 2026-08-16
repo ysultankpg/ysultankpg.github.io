@@ -280,3 +280,13 @@ const AI_AGENTS = [
     status: "Live - weekly runs",
   },
 ];
+
+// ---------------------------------------------------------------------------
+// CERTIFICATIONS & TRAINING
+// ---------------------------------------------------------------------------
+const CERTIFICATIONS = [
+  { name: "Snowflake – The Complete Masterclass", issuer: "Udemy", icon: "❄️" },
+  { name: "Apache Spark with Scala", issuer: "Udemy", icon: "⚡" },
+  { name: "MTA: Database Fundamentals", issuer: "Microsoft", icon: "🏅" },
+  { name: "Tableau Training & Certifications", issuer: "Tableau", icon: "📊" },
+];
