@@ -1,154 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="system">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yousuf Sultan — Lead Data Analyst &amp; Analytics Automation</title>
-<meta name="description" content="Lead Data Analyst with 13+ years building enterprise analytics, BI, and automation platforms. Currently leading Apple Maps analytics via Cognizant.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="animations.css">
-<script src="theme-toggle.js"></script>
+<title>Yousuf Sultan — Lead Data Analyst</title>
+<meta name="description" content="Lead Data Analyst with 13+ years building enterprise analytics, BI, and automation platforms.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./sections.css">
+<link rel="stylesheet" href="./pages.css">
 </head>
-<body id="top" class="page-loading">
+<body>
 
-<div class="progress-bar" id="progress-bar"></div>
+<div class="grain"></div>
 
-<nav class="topnav" id="topnav">
-  <div class="inner">
-    <div class="brand"><a href="#top">Yousuf Sultan</a></div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-right" id="nav-menu">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#agents">AI Agents</a></li>
-        <li><a href="#projects">Automation</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/works/">My Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="theme-toggle" id="theme-toggle"></div>
+<nav class="nav">
+  <a href="#" class="nav-brand">yousuf<span>sultan</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-menu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#agents">Agents</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="/blog/">Blog</a>
+    <a href="/works/">My Works</a>
+    <a href="#contact">Contact</a>
+    <div class="theme-switcher" id="theme-switcher">
+      <button data-theme="light" title="Light" class="theme-btn">☀️</button>
+      <button data-theme="dark" title="Dark" class="theme-btn">🌙</button>
+      <button data-theme="system" title="System" class="theme-btn active">💻</button>
     </div>
   </div>
 </nav>
 
 <header class="hero">
-  <img src="Banner with Photo.png" alt="Yousuf Sultan — Lead Data Analyst" class="banner-img">
-  <div class="hero-actions">
-    <div class="btn-row">
-      <a href="mailto:ysultankpg@gmail.com" class="btn btn-primary" target="_blank" rel="noopener">Get in Touch</a>
-      <a href="Yousuf_Sultan_Resume.pdf" class="btn btn-resume" target="_blank">Download Resume</a>
-      <a href="https://www.linkedin.com/in/yousufkpg/" class="btn btn-linkedin" target="_blank">LinkedIn</a>
+  <div class="hero-bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">Available for opportunities</div>
+      <h1>Data Analyst<br>who <em>automates</em><br>everything.</h1>
+      <p class="hero-sub">13+ years turning raw data into decisions. Currently leading Apple Maps analytics — building AI agents, monitoring 29 pipelines, and managing 20+ dashboards.</p>
+      <div class="hero-cta">
+        <a href="mailto:ysultankpg@gmail.com" class="btn btn-glow">Get in Touch</a>
+        <a href="Yousuf_Sultan_Resume.pdf" class="btn btn-glass" target="_blank">Resume</a>
+        <a href="https://www.linkedin.com/in/yousufkpg/" class="btn btn-glass" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="./photo.jpg" alt="Yousuf Sultan" class="hero-photo">
+    </div>
+  </div>
+  <div class="hero-marquee">
+    <div class="marquee-track">
+      <span>Snowflake</span><span>Tableau</span><span>Python</span><span>SQL</span><span>AI Agents</span><span>Power BI</span><span>ETL</span><span>Automation</span><span>Leadership</span>
     </div>
   </div>
 </header>
 
-<section id="impact">
-  <h2 class="section-title reveal">Impact</h2>
-  <h3 class="section-heading reveal">Numbers that tell the story</h3>
-  <div class="impact-strip" id="impact-strip"></div>
+<section class="bento-stats">
+  <div class="container">
+    <div class="bento-row">
+      <div class="bento-card bc-accent"><span class="bc-num">13+</span><span class="bc-label">Years</span></div>
+      <div class="bento-card bc-cyan"><span class="bc-num">8</span><span class="bc-label">Team</span></div>
+      <div class="bento-card bc-rose"><span class="bc-num">10M+</span><span class="bc-label">Records</span></div>
+      <div class="bento-card bc-amber"><span class="bc-num">20+</span><span class="bc-label">Dashboards</span></div>
+      <div class="bento-card bc-emerald"><span class="bc-num">29</span><span class="bc-label">Pipelines</span></div>
+    </div>
+  </div>
 </section>
 
-<section id="agents" class="alt">
-  <div class="inner">
-    <h2 class="section-title reveal">AI Agents</h2>
-    <h3 class="section-heading reveal">Autonomous assistants I've designed and deployed</h3>
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="big-heading">About <span>Me</span></h2>
+    <div class="about-grid">
+      <div class="about-text glass-card">
+        <p>I'm a Lead Data Analyst with over 13 years turning raw data into decisions — across technology, geospatial, and healthcare organizations.</p>
+        <p>I currently lead analytics strategy for <strong>Apple Maps</strong> (via Cognizant), managing a team of 8 analysts and owning Snowflake/Tableau platforms that process 10M+ records for 50+ stakeholders.</p>
+        <p>I don't just build dashboards — I build <strong>production systems</strong> that keep analytics running themselves.</p>
+      </div>
+      <div class="about-stack">
+        <div class="chip ch-1">Snowflake</div>
+        <div class="chip ch-2">SQL</div>
+        <div class="chip ch-3">Python</div>
+        <div class="chip ch-4">Tableau</div>
+        <div class="chip ch-5">Power BI</div>
+        <div class="chip ch-6">AI Agents</div>
+        <div class="chip ch-7">Team Lead</div>
+        <div class="chip ch-8">Automation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="container">
+    <h2 class="big-heading">Where I've <span>Worked</span></h2>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<section class="agents" id="agents">
+  <div class="container">
+    <h2 class="big-heading">AI <span>Agents</span></h2>
+    <p class="section-sub">Autonomous systems I designed and deployed in production</p>
     <div class="agents-grid" id="agents-grid"></div>
   </div>
 </section>
 
-<section class="alt" id="about">
-  <div class="inner">
-    <h2 class="section-title reveal">About</h2>
-    <h3 class="section-heading reveal">Who I am</h3>
-    <div class="about-grid">
-      <div class="reveal">
-        <p>
-          I'm a Lead Data Analyst with over 13 years of experience turning raw data into
-          decisions — across technology, geospatial, and healthcare organizations. I currently
-          lead analytics strategy for <b>Apple Maps</b> (via Cognizant), managing a team of 8
-          analysts and owning the Snowflake/Tableau platforms that process 10M+ records for
-          50+ stakeholders.
-        </p>
-        <p style="margin-top:14px;">
-          What sets me apart is that I don't just build dashboards — I build the
-          <b>systems that keep analytics operations running themselves</b>. I write production
-          Python to monitor pipelines, auto-escalate failures to Slack/email/Radar, and
-          eliminate manual triage entirely. I care about analytics that's reliable,
-          self-healing, and trusted by the people who depend on it.
-        </p>
-      </div>
-      <div class="reveal">
-        <h4 style="font-size:13px;font-weight:700;margin-bottom:6px;">Core Strengths</h4>
-        <div class="pills" id="core-strengths-pills"></div>
+<section class="projects" id="projects">
+  <div class="container">
+    <h2 class="big-heading">Automation <span>Projects</span></h2>
+    <p class="section-sub">Systems built to eliminate manual work</p>
+    <div class="projects-grid" id="project-list"></div>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="container">
+    <h2 class="big-heading">Skills & <span>Certs</span></h2>
+    <div class="skills-grid" id="skills-grid"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-card glass-card">
+      <h2>Let's build something <span>together.</span></h2>
+      <p>Open to Lead Data Analyst, Analytics Lead, and Analytics Manager roles — remote or Hyderabad hybrid.</p>
+      <div class="contact-btns">
+        <a href="mailto:ysultankpg@gmail.com" class="btn btn-glow">Email Me</a>
+        <a href="https://www.linkedin.com/in/yousufkpg/" class="btn btn-glass" target="_blank">LinkedIn</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="experience">
-  <div class="section-head-row">
-    <h2 class="section-title reveal">Experience</h2>
-    <h3 class="section-heading reveal">Where I've worked</h3>
-  </div>
-  <div class="timeline" id="experience-list"></div>
-</section>
+<footer><p>2026 Yousuf Sultan</p></footer>
 
-<section class="alt" id="projects">
-  <div class="inner">
-    <h2 class="section-title reveal">Automation Projects</h2>
-    <h3 class="section-heading reveal">Systems I've built to eliminate manual work</h3>
-    <div class="projects-grid" id="projects-grid"></div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="section-head-row">
-    <h2 class="section-title reveal">Skills</h2>
-    <h3 class="section-heading reveal">Technical toolkit</h3>
-  </div>
-  <div class="skills-grid" id="skills-grid"></div>
-</section>
-
-<section class="alt" id="certifications">
-  <div class="inner">
-    <h2 class="section-title reveal">Certifications</h2>
-    <h3 class="section-heading reveal">Training & credentials</h3>
-    <div class="certs-grid" id="certs-grid"></div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="contact-card reveal">
-    <h3>Let's talk</h3>
-    <p>Open to Lead Data Analyst, Analytics Lead, and Analytics Manager roles — remote or Hyderabad hybrid.</p>
-    <div class="contact-links">
-      <a href="mailto:ysultankpg@gmail.com">ysultankpg@gmail.com</a>
-      <a href="https://www.linkedin.com/in/yousufkpg/" target="_blank" class="linkedin-link">LinkedIn</a>
-      <a href="tel:+919739001239">+91 9739001239</a>
-    </div>
-  </div>
-</section>
-
-<footer class="pagefoot">
-  2026 Yousuf Sultan - Built with care
-  <div style="margin-top:6px;">
-    Unique Visitors: <span id="visitor-count">...</span>
-  </div>
-</footer>
-
-<button class="back-to-top" id="back-to-top" aria-label="Back to top">
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
-
-<script src="visitor-counter.js"></script>
-<script src="data.js"></script>
-<script src="render.js"></script>
-<script src="animations.js"></script>
-<script src="nav-active.js"></script>
+<script src="./data.js"></script>
+<script src="./render.js"></script>
+<script src="./theme.js"></script>
 </body>
 </html>

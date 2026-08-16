@@ -1,129 +1,83 @@
-/* ============================================================================
-   PORTFOLIO RENDER SCRIPT (Enhanced)
-   ----------------------------------------------------------------------------
-   Reads from data.js and renders each section. Adds reveal classes for scroll
-   animations and timeline layout for experience.
-============================================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  // Hamburger
+  const ham = document.getElementById("hamburger");
+  const menu = document.getElementById("nav-menu");
+  if (ham && menu) ham.addEventListener("click", () => menu.classList.toggle("open"));
 
-function renderImpact() {
-  const el = document.getElementById("impact-strip");
-  el.classList.add("reveal-stagger");
-  el.innerHTML = IMPACT_NUMBERS.map(
-    (item) => `
-    <div class="impact-card">
-      <span class="num">${item.num}</span>
-      <span class="label">${item.label}</span>
-    </div>`
-  ).join("");
-}
-
-function renderCoreStrengths() {
-  const el = document.getElementById("core-strengths-pills");
-  el.innerHTML = CORE_STRENGTHS.map(
-    (s) => `
-    <span class="pill" style="background:${s.bg};color:${s.color};border-color:${s.bg};">${s.name}</span>`
-  ).join("");
-}
-
-function renderExperience() {
-  const el = document.getElementById("experience-list");
-
-  const sorted = [...EXPERIENCE].sort((a, b) => {
-    const aOngoing = a.endDate === null;
-    const bOngoing = b.endDate === null;
-    if (aOngoing && !bOngoing) return -1;
-    if (bOngoing && !aOngoing) return 1;
-    return new Date(b.startDate) - new Date(a.startDate);
-  });
-
-  el.innerHTML = sorted
-    .map(
-      (job) => `
-    <div class="job-card reveal">
-      <div class="job-head">
-        <span class="job-title">${job.title}</span>
-        <span class="job-dates">${job.dateLabel}</span>
+  // Experience timeline
+  const tl = document.getElementById("timeline");
+  tl.innerHTML = EXPERIENCE.map(j => `
+    <div class="tl-item">
+      <div class="tl-head">
+        <span class="tl-title">${j.title}</span>
+        <span class="tl-dates">${j.dates}</span>
       </div>
-      <div class="job-co">${job.company || ""}</div>
-      <ul>
-        ${job.bullets.map((b) => `<li>${b}</li>`).join("\n        ")}
-      </ul>
-    </div>`
-    )
-    .join("");
-}
+      <div class="tl-company">${j.company}</div>
+      <ul>${j.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+    </div>
+  `).join("");
 
-function renderProjects() {
-  const el = document.getElementById("projects-grid");
-  el.innerHTML = AUTOMATION_PROJECTS.map(
-    (p) => `
-    <div class="project-card reveal">
-      <div class="project-icon">${p.icon}</div>
+  // Agents
+  const ag = document.getElementById("agents-grid");
+  ag.innerHTML = AI_AGENTS.map(a => `
+    <div class="agent-card">
+      <div class="card-header">
+        <span class="card-icon">${a.icon}</span>
+        <h4>${a.title}</h4>
+      </div>
+      <div class="status">${a.status}</div>
+      <p>${a.description}</p>
+      <div class="tags">${a.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+    </div>
+  `).join("");
+
+  // Projects — now as 2x2 grid cards
+  const pl = document.getElementById("project-list");
+  pl.innerHTML = PROJECTS.map(p => `
+    <div class="proj-card">
+      <span class="proj-icon">${p.icon}</span>
       <h4>${p.title}</h4>
-      <p class="desc">${p.description}</p>
-      <div class="project-tags">
-        ${p.tags.map((t) => `<span class="tag">${t}</span>`).join("\n        ")}
-      </div>
-      <div class="project-stats">
-        ${p.stats.map((s) => `<span>${s}</span>`).join("\n        ")}
-      </div>
-    </div>`
-  ).join("");
-}
+      <p>${p.description}</p>
+      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+    </div>
+  `).join("");
 
-function renderSkills() {
-  const el = document.getElementById("skills-grid");
-  el.innerHTML = SKILL_CATEGORIES.map(
-    (cat) => `
-    <div class="skill-block reveal">
-      <h4>${cat.title}</h4>
-      <p>${cat.items.join(", ")}</p>
-    </div>`
-  ).join("");
-}
-
-function renderAgents() {
-  const el = document.getElementById("agents-grid");
-  if (!el || typeof AI_AGENTS === "undefined") return;
-  el.innerHTML = AI_AGENTS.map(
-    (a) => `
-    <div class="agent-card reveal">
-      <div class="agent-header">
-        <span class="agent-icon">${a.icon}</span>
-        <div>
-          <h4>${a.title}</h4>
-          <span class="agent-status">${a.status}</span>
-        </div>
-      </div>
-      <p class="desc">${a.description}</p>
-      <div class="project-tags">
-        ${a.tags.map((t) => `<span class="tag">${t}</span>`).join("\n        ")}
-      </div>
-    </div>`
-  ).join("");
-}
-
-function renderCerts() {
-  const el = document.getElementById("certs-grid");
-  if (!el || typeof CERTIFICATIONS === "undefined") return;
-  el.innerHTML = CERTIFICATIONS.map(
-    (c) => `
-    <div class="cert-card reveal">
+  // Skills + Certs
+  const sk = document.getElementById("skills-grid");
+  const skillsHTML = SKILLS.map(s => `
+    <div class="skill-card">
+      <h4>${s.title}</h4>
+      <p>${s.items}</p>
+    </div>
+  `).join("");
+  const certsHTML = `<div class="cert-row">${CERTS.map(c => `
+    <div class="cert-badge">
       <span class="cert-icon">${c.icon}</span>
-      <div>
-        <h4>${c.name}</h4>
+      <div class="cert-info">
+        <h5>${c.name}</h5>
         <p>${c.issuer}</p>
       </div>
-    </div>`
-  ).join("");
-}
+    </div>
+  `).join("")}</div>`;
+  sk.innerHTML = skillsHTML + certsHTML;
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderImpact();
-  renderCoreStrengths();
-  renderExperience();
-  renderAgents();
-  renderProjects();
-  renderSkills();
-  renderCerts();
+  // Scroll reveal with stagger
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => {
+          e.target.style.opacity = "1";
+          e.target.style.transform = "translateY(0)";
+        }, i * 60);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.06 });
+
+  document.querySelectorAll(".agent-card, .proj-card, .skill-card, .cert-badge, .tl-item, .bento-card, .about-grid, .contact-card").forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(28px)";
+    el.style.transition = "opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)";
+    observer.observe(el);
+  });
 });
