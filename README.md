@@ -34,8 +34,7 @@ Glassmorphic dark-theme portfolio with animated floating orbs, built on Jekyll a
 - **Static site generator:** Jekyll (Ruby)
 - **Hosting:** GitHub Pages (auto-builds on push to `main`)
 - **Styling:** Pure CSS with custom properties (no frameworks)
-- **JavaScript:** Vanilla JS — data-driven rendering, theme persistence, visitor counter
-- **Visitor counter:** Tallywire API + localStorage deduplication (no double-count on refresh), with multi-API fallback chain
+- **JavaScript:** Vanilla JS — data-driven rendering, theme persistence, scroll animations
 
 ## Project Structure
 
@@ -47,7 +46,6 @@ Glassmorphic dark-theme portfolio with animated floating orbs, built on Jekyll a
 ├── data.js                 # Experience, agents, projects, skills, certs data
 ├── render.js               # DOM rendering + scroll animations
 ├── theme.js                # Light/dark/system theme switcher
-├── visitor-counter.js      # Unique visitor counter (Tallywire + fallback)
 ├── _config.yml             # Jekyll config (future: true for timezone safety)
 ├── _layouts/
 │   ├── default.html        # Base layout (nav, footer, go-to-top, scripts)
