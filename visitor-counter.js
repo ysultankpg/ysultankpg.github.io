@@ -1,28 +1,28 @@
-// Unique visitor counter using CountAPI
+// Unique visitor counter using CounterAPI.dev
 // Only counts once per browser (localStorage flag)
 (function() {
   const NAMESPACE = "yousufsultan-portfolio";
   const KEY = "visitors";
-  const API = "https://api.countapi.xyz";
+  const API = "https://api.counterapi.dev/v1";
 
   function displayCount(num) {
     const el = document.getElementById("visitor-count");
-    if (el) el.textContent = num.toLocaleString();
+    if (el) el.textContent = Number(num).toLocaleString();
   }
 
   // Check if this browser already counted
   if (localStorage.getItem("ys_counted")) {
     // Already counted — just fetch current value
-    fetch(API + "/get/" + NAMESPACE + "/" + KEY)
+    fetch(API + "/" + NAMESPACE + "/" + KEY)
       .then(r => r.json())
-      .then(data => displayCount(data.value || 0))
+      .then(data => displayCount(data.count || 0))
       .catch(() => displayCount("—"));
   } else {
-    // New visitor — hit the counter
-    fetch(API + "/hit/" + NAMESPACE + "/" + KEY)
+    // New visitor — increment the counter
+    fetch(API + "/" + NAMESPACE + "/" + KEY + "/up")
       .then(r => r.json())
       .then(data => {
-        displayCount(data.value || 0);
+        displayCount(data.count || 0);
         localStorage.setItem("ys_counted", "1");
       })
       .catch(() => displayCount("—"));
