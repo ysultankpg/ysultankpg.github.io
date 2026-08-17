@@ -17,3 +17,9 @@
   type: "Tableau Public"
   image: "/assets/images/works/hr-analysis-dashboard.png"
   icon: "📊"
+
+- title: "Operation Efficiency Tracker"
+  description: "An end-to-end operations analytics dashboard tracking throughput, productivity, quality, and actionability KPIs across an automated evaluation pipeline. Monitors sample lifecycle from creation through review and publish, with drill-downs by category, vendor, market, and time period. Built to surface bottlenecks, measure reviewer efficiency, and track automation confidence at scale."
+  url: "https://public.tableau.com/app/profile/ysultankpg/viz/OperationEfficiencyTracker/Throughput"
+  type: "Tableau Public"
+  icon: "⚙️"
