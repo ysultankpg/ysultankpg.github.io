@@ -18,6 +18,7 @@ const PROJECTS = [
   { icon: "🎫", title: "Radar Ticket Hygiene Bot", description: "Automation bot that scans open tickets for missing required fields and auto-routes targeted notifications to the correct owner — removing manual audit entirely.", tags: ["Python", "SMTP Email", "Slack Webhooks"] },
   { icon: "🌳", title: "SQL Table Lineage Explorer", description: "Traces full upstream and downstream table lineage from SQL source code. Parses every SQL file into a dependency graph, runs BFS in both directions, rendered as a searchable collapsible tree.", tags: ["Python", "SQL Parsing", "Snowflake", "Dependency Graphs"] },
   { icon: "📖", title: "Self-Updating Data Dictionary Generator", description: "Browser-based tool that turns any SQL folder into a browsable, self-updating data dictionary with optional live Snowflake enrichment. Security-first — credentials never touch the browser.", tags: ["JavaScript", "SQL Parsing", "FastAPI", "Security-First"] },
+  { icon: "🧬", title: "GitAnatomy — GitHub Repository Analyzer", description: "A live, zero-dependency web app that dissects any GitHub repository — structure visualization, health scoring (11 indicators), and auto-generated data dictionary from SQL/Prisma/TypeORM. Supports github.com and GitHub Enterprise. Deployed via GitHub Actions to GitHub Pages.", tags: ["JavaScript", "GitHub API v3", "SQL Parsing", "GitHub Pages", "CI/CD", "Claude Code"], link: "https://ysultankpg.github.io/gitanatomy/" },
 ];
 
 const SKILLS = [
