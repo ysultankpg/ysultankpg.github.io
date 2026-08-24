@@ -206,8 +206,6 @@ strong { color: var(--text); }
   margin-top: 40px; padding: 14px 0;
   background: var(--marquee-bg); overflow: hidden;
   border-radius: var(--radius);
-  max-width: 600px;
-  margin-left: auto; margin-right: auto;
 }
 .marquee-track {
   display: flex; gap: 40px; width: max-content;
