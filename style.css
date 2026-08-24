@@ -206,17 +206,15 @@ strong { color: var(--text); }
   margin-top: 40px; padding: 14px 0;
   background: var(--marquee-bg); overflow: hidden;
   border-radius: var(--radius);
-  max-width: 100%;
 }
 .marquee-track {
-  display: flex; gap: 40px; width: max-content;
-  animation: marquee 25s linear infinite;
+  display: flex; gap: 40px; width: 100%; justify-content: center;
 }
 .marquee-track span {
   font-size: 14px; font-weight: 700; color: var(--marquee-text);
   text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;
 }
-@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-33.33%); } }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* === BUTTONS === */
 .btn {
