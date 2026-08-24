@@ -208,7 +208,8 @@ strong { color: var(--text); }
   border-radius: var(--radius);
 }
 .marquee-track {
-  display: flex; gap: 40px; width: 100%; justify-content: center;
+  display: flex; gap: 40px; width: max-content;
+  animation: marquee 20s linear infinite;
 }
 .marquee-track span {
   font-size: 14px; font-weight: 700; color: var(--marquee-text);
