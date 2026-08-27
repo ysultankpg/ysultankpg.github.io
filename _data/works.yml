@@ -33,7 +33,7 @@
   icon: "🧬"
 
 - title: "Buruj al-Qur'an — Quranic Constellation"
-  description: "A native Android app that maps all 114 surahs as an interactive constellation of stars. Features Arabic text with English translations, 20+ reciters for audio playback, thematic connections between surahs, and a full-screen immersive star map with spiral layout."
-  url: "https://ysultankpg.github.io/buruj/"
-  type: "Android App"
+  description: "An interactive web app that maps all 114 surahs as a constellation of stars. Explore thematic connections, read Arabic text with English translations, and listen to 20+ reciters — all rendered in an immersive star map with spiral layout."
+  url: "https://ysultankpg.github.io/quranic-constellation"
+  type: "Web App"
   icon: "✦"
