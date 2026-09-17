@@ -7,9 +7,7 @@ const EXPERIENCE = [
 ];
 
 const AI_AGENTS = [
-  { icon: "🤖", title: "Radar Daily Triage", status: "Live - daily on weekdays", description: "Scans all open tickets across assigned components, categorizes by urgency (Overdue, Due Soon, P1/P2, Stale 60+ days), and emails a clean HTML summary with 3-6 prioritized action items every weekday at 9 AM.", tags: ["Scheduled Agent", "Email Automation", "Bug Tracking API"] },
-  { icon: "👥", title: "Team Radar Triage", status: "Live - scheduled runs", description: "Pulls all open tickets from multiple bug-tracking components, groups by assignee, and delivers a structured prioritized report via email — giving the entire team backlog visibility without manual audit.", tags: ["Multi-Component", "Team Visibility", "Email"] },
-  { icon: "📋", title: "My Day - Radar Triage", status: "Live - daily runs", description: "Reviews both assigned and originated tickets, synthesizes into a single prioritized action list, and emails a formatted start-of-day briefing to eliminate manual ticket scanning.", tags: ["Personal Workflow", "Daily Briefing"] },
+  { icon: "🤖", title: "Radar Triage Agents", status: "Live - daily & scheduled runs", description: "Suite of automated triage agents that scan open tickets across multiple bug-tracking components, categorize by urgency (Overdue, Due Soon, P1/P2, Stale 60+ days), group by assignee, and deliver prioritized HTML summaries via email — covering personal daily briefings, team-wide backlog visibility, and component-level triage without any manual audit.", tags: ["Scheduled Agent", "Email Automation", "Bug Tracking API", "Multi-Component"] },
   { icon: "📊", title: "Stakeholder Weekly Recap", status: "Live - weekly runs", description: "Compiles key updates, metrics movements, and action items across all active workstreams into a single digest — delivered to 50+ stakeholders via Slack and email.", tags: ["Slack API", "Weekly Digest", "Stakeholder Comms"] },
 ];
 
