@@ -9,6 +9,7 @@ const EXPERIENCE = [
 const AI_AGENTS = [
   { icon: "🤖", title: "Radar Triage Agents", status: "Live - daily & scheduled runs", description: "Suite of automated triage agents that scan open tickets across multiple bug-tracking components, categorize by urgency (Overdue, Due Soon, P1/P2, Stale 60+ days), group by assignee, and deliver prioritized HTML summaries via email — covering personal daily briefings, team-wide backlog visibility, and component-level triage without any manual audit.", tags: ["Scheduled Agent", "Email Automation", "Bug Tracking API", "Multi-Component"] },
   { icon: "📊", title: "Stakeholder Weekly Recap", status: "Live - weekly runs", description: "Compiles key updates, metrics movements, and action items across all active workstreams into a single digest — delivered to 50+ stakeholders via Slack and email.", tags: ["Slack API", "Weekly Digest", "Stakeholder Comms"] },
+  { icon: "📝", title: "Release Note Drafter", status: "Live - on demand", description: "AI agent that auto-generates structured release notes from bug-tracking tickets at verification stage. Fetches ticket details, analyzes discussion threads and resolution comments, and produces stakeholder-ready notes covering root cause, solution, validation, metrics impact, and deployment details — with a classification rubric score across deliverables, dependencies, and scope clarity.", tags: ["AI Agent", "Bug Tracking API", "Release Management", "Prompt Engineering"] },
 ];
 
 const PROJECTS = [
