@@ -37,8 +37,3 @@
   url: "https://ysultankpg.github.io/quranic-constellation"
   type: "Web App"
   icon: "✦"
-
-- title: "CascadeTrigger — Pipeline Dependency Orchestrator"
-  description: "A config-driven orchestration system that watches upstream data pipelines and automatically triggers downstream jobs the moment all dependencies succeed. Runs in continuous watch mode with configurable polling, supports multi-upstream dependency resolution, Slack notifications with execution links, Snowflake-based audit logging, and API fallback mechanisms. Pipeline config lives entirely in database tables — zero code changes to add or remove pipelines."
-  type: "Internal Tool"
-  icon: "🔗"
