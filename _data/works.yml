@@ -39,6 +39,6 @@
   icon: "✦"
 
 - title: "CascadeTrigger — Pipeline Dependency Orchestrator"
-  description: "A dependency-aware orchestration layer that automatically triggers downstream data pipelines upon upstream completion. Manages execution ordering, dependency resolution, and cascading triggers across a multi-stage Snowflake analytics pipeline — eliminating manual sequencing and reducing end-to-end processing latency."
+  description: "A config-driven orchestration system that watches upstream data pipelines and automatically triggers downstream jobs the moment all dependencies succeed. Runs in continuous watch mode with configurable polling, supports multi-upstream dependency resolution, Slack notifications with execution links, Snowflake-based audit logging, and API fallback mechanisms. Pipeline config lives entirely in database tables — zero code changes to add or remove pipelines."
   type: "Internal Tool"
   icon: "🔗"
